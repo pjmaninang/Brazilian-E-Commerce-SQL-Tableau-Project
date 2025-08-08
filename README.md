@@ -13,7 +13,7 @@ The original dataset can be found and downloaded [here](https://www.kaggle.com/d
 
 An interactive Tableau dashboard can be viewed and downloaded [here](https://public.tableau.com/app/profile/pj.maninang/viz/BrazilEcommerceDashboard_17545320710820/Dashboard1)
 
-
+The SQL queries utilized to prepare the data for the dashboard can be found [here](https://github.com/pjmaninang/Brazilian-E-Commerce-SQL-Tableau-Project/blob/main/ecommerce_sql_script.sqbpro)
 
 ## Data Structure
 
