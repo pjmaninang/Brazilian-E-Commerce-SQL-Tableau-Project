@@ -52,6 +52,10 @@ Below is the dashboard's general overview without any filtering, but the complet
 
 ## Recommendations
 
+- Implement retention programs and exclusive offers in São Paulo to sustain its nearly 50% contribution to revenue, while replicating successful strategies in other high-potential regions
+- Develop targeted campaigns to mitigate sharp post-promotion or seasonal drops, particularly after peak months like November, to maintain revenue stability
+- Launch localized marketing, partnerships, and distribution initiatives in low-penetration states such as Roraima, Amapá, and Acre to capture new customer bases and grow regional sales
+
 ## Limitations
 
 - **Incomplete Sales Data for 2016 and 2018:** Sales records for these years are cover only a small portion of the complete year, with September 2018 only having 1 order. This has resulted in understated revenue figures, as well as innacurate month-over-month percentages for the adjacent months
