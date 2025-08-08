@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="E:/Programs/sqlite3/olist.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2082"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="orders" custom_title="0" dock_id="2" table="4,6:mainorders"/><dock_state state="000000ff00000000fd0000000100000002000004f2000004e6fc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000004f20000016200ffffff000004f20000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="customers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="263"/><column index="2" value="263"/><column index="3" value="159"/><column index="4" value="207"/><column index="5" value="99"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="order_payments" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="263"/><column index="2" value="125"/><column index="3" value="95"/><column index="4" value="136"/><column index="5" value="97"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="orders" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="263"/><column index="2" value="263"/><column index="3" value="95"/><column index="4" value="167"/><column index="5" value="159"/><column index="6" value="177"/><column index="7" value="193"/><column index="8" value="190"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE VIEW monthly_sales_summary_view as
+with monthly_sales_summary as (
+SELECT
+	date(o.order_purchase_timestamp, 'start of month') as order_date_full,							
+	strftime('%Y', o.order_purchase_timestamp) as order_year,										
+	strftime('%m', o.order_purchase_timestamp) as order_month, 										
+	pc.product_category_name_english as product_category,
+	count(distinct o.order_id) as total_orders,														
+	count(distinct o.customer_id) as total_customers,
+	c.customer_state as state,
+	round(sum(op.payment_value),2) as total_revenue,
+	round(sum(op.payment_value)/count(distinct o.order_id),2) as avg_order_value,
+	round(sum(op.payment_value)*0.28,2) as total_revenue_usd,										
+	round(sum(op.payment_value)/count(distinct o.order_id)*0.28,2) as avg_order_value_usd
+FROM
+	customers c
+	join orders o on c.customer_id = o.customer_id
+	join order_payments op on op.order_id = o.order_id
+	join order_items oi on oi.order_id = o.order_id
+	join products p on p.product_id = oi.product_id
+	join product_category_name_translation pc on pc.product_category_name = p.product_category_name
+group by 
+	order_date_full,
+	order_year,
+	order_month,
+	product_category,
+	state
+)
+	select
+		order_date_full,
+		order_year,
+		order_month,
+		product_category,
+		total_orders,
+		total_customers,
+		state,
+		total_revenue,
+		total_revenue_usd,
+		avg_order_value,
+		avg_order_value_usd,
+		round(
+			sum(total_revenue) over (
+			partition by order_year, product_category, state order by order_date_full)*0.28, 2)
+			as cumulative_revenue_ytd_usd,
+		round(
+			(total_revenue - lag(total_revenue) over (
+			partition by order_year, product_category, state order by order_date_full))*0.28,2)
+			as mom_revenue_change_usd
+	FROM
+	monthly_sales_summary
+	order by order_date_full;
+		
+		
+	
+	
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
