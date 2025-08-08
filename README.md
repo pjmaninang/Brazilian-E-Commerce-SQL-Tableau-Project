@@ -1,7 +1,7 @@
 # E-Commerce Sales and Product Performance Analysis
 ## Project Overview
 
-This Brazilian e-commerce company (synthetic) requested that a sales analysis be conducted for a specific sales period from September 2016 - September 2018. Their SQL database contains significant amounts of data on its sales, products, sellers, and even order reviews. This project thoroughly analyzes and visualizes the sales data from their database, in order to uncover key insights that will guide their company's strategic planning.
+This synthetic Brazilian e-commerce company requested a sales analysis for the period of September 2016 to September 2018. Its SQL database contains extensive information on sales, products, sellers, and order reviews. This project conducts a comprehensive analysis and visualization of the sales data to uncover key insights that can inform the company’s strategic planning.
 
 To provide a thorough sales and product performance analysis, insights and recommendations were focused around:
 
@@ -29,7 +29,7 @@ The company's database structure consists of these 11 tables:
 
 ###Sales Trends
 
--
+- 
 
 ###Product Performance
 
@@ -38,3 +38,6 @@ The company's database structure consists of these 11 tables:
 ## Recommendations
 
 ## Limitations
+
+- **Incomplete Sales Data for 2016 and 2018:** Sales records for these years are cover only a small portion of the complete year, with September 2018 only having 1 order. This has resulted in understated revenue figures, as well as innacurate month-over-month percentages for the adjacent months
+- **Limited Customer Demographics:** The customers table contains only customer ID and state information, limiting the ability to further aggregate or segment sales trend analysis by additional demographic attributes
