@@ -36,9 +36,9 @@ The company's database structure consists of these 11 tables:
 
 ### Product Performance
 
-- The top five product categories—bed/bath/table, health/beauty, computers/accessories, furniture/decor, and watches/gifts—each generate over $400K in revenue and more than 5,000 total orders. This concentration of sales highlights a core set of high-demand categories that are critical to sustaining overall revenue performance
+- The top five product categories—bed_bath_table, health_beauty, computers_accessories, furniture_decor, and watches_gifts—each generate over $400K in revenue and more than 5,000 total orders. This concentration of sales highlights a core set of high-demand categories that are critical to sustaining overall revenue performance
 - Among the top 10 performing product categories, watches/gifts ($71.16), garden tools ($66.72), and computers/accessories ($66.36) hold the highest average order values. This suggests that these categories attract higher-value purchases, making them key drivers for maximizing revenue per transaction
-- 
+- Several product categories, such as security_and_services ($91) and fashion_childrens_clothes ($220), and cds_dvds_musicals($336) generate negligible revenue, indicating either minimal demand or potential issues with product visibility and availability
 
 ### State Comparisons
 
