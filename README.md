@@ -25,6 +25,11 @@ The company's database structure consists of these 11 tables:
 
 ### Overview of Findings
 
+From October 2016 to November 2017, revenue rose from $20K to a peak of $438K, maintaining over $340K for the final seven months, reflecting strong sales scaling and stable demand. Monthly revenue patterns show sharp fluctuations, including a 56.9% surge in November 2017 followed by a 33.9% drop in the next month. Sales are concentrated in five high-performing categories—bed_bath_table, health_beauty, computers_accessories, furniture_decor, and watches_gifts—with São Paulo generating nearly half of total revenue and orders. In contrast, low-penetration states like Roraima, Amapá, and Acre present opportunities for targeted marketing and distribution expansion.
+
+Below is the dashboard's general overview without any filtering, but the complete interactive dashboard can be found and downloaded [here](https://public.tableau.com/app/profile/pj.maninang/viz/BrazilEcommerceDashboard_17545320710820/Dashboard1)
+![Dashboard](https://github.com/pjmaninang/Brazilian-E-Commerce-SQL-Tableau-Project/blob/main/Dashboard.png?raw=true)
+
 ## Findings and Insights
 
 ### Sales Trends
@@ -41,6 +46,9 @@ The company's database structure consists of these 11 tables:
 - Several product categories, such as security_and_services ($91) and fashion_childrens_clothes ($220), and cds_dvds_musicals($336) generate negligible revenue, indicating either minimal demand or potential issues with product visibility and availability
 
 ### State Comparisons
+
+- São Paulo is the clear leader in sales performance, generating $2.1 million in revenue from 41,106 orders—accounting for nearly half of both total revenue and total order volume. This dominance underscores the state’s critical role in the company’s market presence and highlights it as a key region for sustaining growth and implementing targeted retention strategies
+- The three states with the smallest customer bases—Roraima (44), Amapá (68), and Acre (80)—consistently generate minimal revenue across the sales periods. Their low customer penetration and limited sales contribution suggest untapped market potential that may require targeted marketing, localized outreach, or improved distribution channels to stimulate growth
 
 ## Recommendations
 
