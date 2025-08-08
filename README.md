@@ -29,7 +29,9 @@ The company's database structure consists of these 11 tables:
 
 ###Sales Trends
 
-- 
+- Revenue trends show sharp month-over-month changes, with the most notable peak growth from Oct 2017 to Nov 2017 (56.9%), and an immediate significant revenue loss of 33.9% in Dec 2017. This can indicate possible promotional periods or seasonal demand spikes of their products
+- Despite generating $20K in revenue from 309 orders in October 2016, there were no recorded sales in November and only a single order in December, suggesting a potential operational disruption or data reporting gap during this period
+- Average order value remains stable at approximately $50 per order across the entire dataset timeline, indicating consistent customer spending behavior and pricing stability
 
 ###Product Performance
 
