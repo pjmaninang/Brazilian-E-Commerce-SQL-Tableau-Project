@@ -1,3 +1,4 @@
+![banner](https://github.com/pjmaninang/Brazilian-E-Commerce-SQL-Tableau-Project/blob/main/banner.jpg?raw=true)
 # E-Commerce Sales and Product Performance Analysis
 ## Project Overview
 
