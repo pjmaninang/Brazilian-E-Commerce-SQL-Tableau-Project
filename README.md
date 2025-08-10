@@ -59,5 +59,5 @@ Below is the dashboard's general overview without any filtering, but the complet
 
 ## Limitations
 
-- **Incomplete Sales Data for 2016 and 2018:** Sales records for these years are cover only a small portion of the complete year, with September 2018 only having 1 order. This has resulted in understated revenue figures, as well as innacurate month-over-month percentages for the adjacent months
+- **Incomplete Sales Data for 2016 and 2018:** Sales records for these years are cover only a small portion of the complete year, with September 2018 only having 1 order. This has resulted in understated revenue figures, as well as inaccurate month-over-month percentages for the adjacent months
 - **Limited Customer Demographics:** The customers table contains only customer ID and state information, limiting the ability to further aggregate or segment sales trend analysis by additional demographic attributes
